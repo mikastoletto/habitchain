@@ -49,25 +49,24 @@
         max-width: 100%;
         overflow: hidden;
         border-radius: 6px;
+        height: 400px; /* фиксированная высота */
     }
     .slides {
         display: flex;
         transition: transform 0.5s ease-in-out;
         width: 300%;
+        height: 100%;
     }
     .slide {
         min-width: 100%;
+        height: 100%;
         box-sizing: border-box;
-        text-align: center;
     }
     .slide img {
-        max-height: 400px;
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
+        display: block;
     }
     .slider-buttons {
         position: absolute;
