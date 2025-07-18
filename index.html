@@ -8,67 +8,75 @@
     body {
         margin: 0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #f8f9fb;
-        color: #333;
+        background: #f5f5f5;
+        color: #222;
     }
     header {
-        background: linear-gradient(90deg, #4e54c8, #8f94fb);
+        background: #222;
         padding: 20px;
         text-align: center;
         color: white;
     }
     header h1 {
         margin: 0;
-        font-size: 2em;
+        font-size: 1.8em;
+        letter-spacing: 0.5px;
     }
     .container {
         max-width: 800px;
         margin: 40px auto;
         padding: 20px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
     }
     .section {
         margin-bottom: 30px;
     }
     .section h2 {
-        color: #4e54c8;
-        font-size: 1.5em;
-        margin-bottom: 10px;
+        color: #444;
+        font-size: 1.4em;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 4px;
     }
     .section p {
         line-height: 1.6;
+        font-size: 0.95em;
     }
     .languages {
         display: flex;
-        justify-content: space-around;
-        margin-top: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 15px;
     }
     .lang {
-        flex: 1;
-        margin: 10px;
-        padding: 15px;
+        flex: 1 1 calc(30% - 12px);
+        min-width: 150px;
         border: 1px solid #ddd;
-        border-radius: 8px;
-        text-align: center;
+        border-radius: 6px;
+        padding: 12px;
         background: #fafafa;
+        text-align: center;
     }
     .lang h3 {
-        color: #4e54c8;
+        margin: 0 0 6px;
+        font-size: 1.1em;
+        color: #333;
     }
     .lang a {
         display: inline-block;
-        margin-top: 10px;
+        margin-top: 8px;
         text-decoration: none;
-        color: #8f94fb;
-        font-weight: bold;
+        color: #555;
+        font-size: 0.9em;
     }
     footer {
         text-align: center;
-        padding: 20px;
-        font-size: 0.9em;
-        color: #777;
+        padding: 15px;
+        font-size: 0.85em;
+        color: #888;
     }
 </style>
 </head>
@@ -82,14 +90,15 @@
     <div class="section">
         <h2>About Loanit</h2>
         <p>
-            Loanit is your modern habit tracker with a twist: every completed habit adds to your personal “savings jar”. Build daily habits, stay consistent, and see your progress grow over time — one good habit at a time!
+            Loanit helps you build and maintain daily habits while visualizing your progress as a growing “savings jar.”  
+            Simple, practical, and designed to keep you on track — one habit at a time.
         </p>
     </div>
 
     <div class="section">
         <h2>Contact Support</h2>
         <p>
-            If you have questions, suggestions, or need assistance, feel free to reach out to our support team at:
+            For support inquiries, feedback, or questions, please contact us at:  
             <br>
             <a href="mailto:mikastoletto@gmail.com">mikastoletto@gmail.com</a>
         </p>
