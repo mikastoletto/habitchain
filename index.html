@@ -5,129 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loanit — Support</title>
 <style>
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #f5f5f5;
-        color: #222;
-    }
-    header {
-        background: #222;
-        padding: 20px;
-        text-align: center;
-        color: white;
-    }
-    header h1 {
-        margin: 0;
-        font-size: 1.8em;
-    }
-    .container {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
-        background: #fff;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-    }
-    .section {
-        margin-bottom: 30px;
-    }
-    .section h2 {
-        color: #444;
-        font-size: 1.4em;
-        margin-bottom: 8px;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 4px;
-    }
-    .section p {
-        line-height: 1.6;
-        font-size: 0.95em;
-    }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+header {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+.section {
+    margin-bottom: 30px;
+}
+.section h2 {
+    color: #444;
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+}
+.section p {
+    line-height: 1.6;
+    font-size: 0.95em;
+}
 
-    .slider {
-        position: relative;
-        max-width: 100%;
-        overflow: hidden;
-        border-radius: 6px;
-        height: 400px; /* фиксированная высота */
-        background: #000; /* фон для пустых мест */
-    }
-    .slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        width: 300%;
-    }
-    .slide {
-        min-width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-        line-height: 400px; /* вертикальное центрирование если картинка меньше */
-    }
-    .slide img {
-        max-height: 100%;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        display: inline-block;
-        vertical-align: middle;
-        object-fit: contain;
-    }
-    .slider-buttons {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-    }
-    .slider-buttons button {
-        background: rgba(0,0,0,0.5);
-        border: none;
-        color: white;
-        font-size: 1.5em;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-
-    .languages {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 15px;
-    }
-    .lang {
-        flex: 1 1 calc(30% - 12px);
-        min-width: 150px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        padding: 12px;
-        background: #fafafa;
-        text-align: center;
-    }
-    .lang h3 {
-        margin: 0 0 6px;
-        font-size: 1.1em;
-        color: #333;
-    }
-    .lang a {
-        display: inline-block;
-        margin-top: 8px;
-        text-decoration: none;
-        color: #555;
-        font-size: 0.9em;
-    }
-    footer {
-        text-align: center;
-        padding: 15px;
-        font-size: 0.85em;
-        color: #888;
-    }
-    footer a {
-        color: #555;
-        text-decoration: none;
-        margin-left: 10px;
-    }
+.slider {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 6px;
+}
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.slider-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.slider-buttons button {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.languages {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+.lang {
+    flex: 1 1 calc(30% - 12px);
+    min-width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    background: #fafafa;
+    text-align: center;
+}
+.lang h3 {
+    margin: 0 0 6px;
+    font-size: 1.1em;
+    color: #333;
+}
+.lang a {
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9em;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85em;
+    color: #888;
+}
+footer a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 10px;
+}
 </style>
 </head>
 <body>
@@ -202,26 +200,26 @@
 </footer>
 
 <script>
-    const slides = document.getElementById('slides');
-    const totalSlides = slides.children.length;
-    let index = 0;
+const slides = document.getElementById('slides');
+const totalSlides = slides.children.length;
+let index = 0;
 
-    function updateSlide() {
-        slides.style.transform = `translateX(-${index * 100}%)`;
-    }
+function updateSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
 
-    document.getElementById('next').addEventListener('click', () => {
-        index = (index + 1) % totalSlides;
-        updateSlide();
-    });
-
-    document.getElementById('prev').addEventListener('click', () => {
-        index = (index - 1 + totalSlides) % totalSlides;
-        updateSlide();
-    });
-
-    // Инициализация на первом слайде
+document.getElementById('next').addEventListener('click', () => {
+    index = (index + 1) % totalSlides;
     updateSlide();
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlide();
+});
+
+// Инициализация
+updateSlide();
 </script>
 
 </body>
