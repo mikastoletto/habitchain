@@ -22,7 +22,7 @@ header h1 {
     font-size: 1.8em;
 }
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
     background: #fff;
@@ -44,49 +44,20 @@ header h1 {
     font-size: 0.95em;
 }
 
-.slider {
-    position: relative;
-    max-width: 100%;
-    height: 400px;
-    overflow: hidden;
-    background: #000;
-    border-radius: 6px;
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
 }
-.slides {
-    display: flex;
-    width: 300%;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-.slide {
+.screenshot-grid img {
     width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slide img {
-    max-width: 100%;
-    max-height: 100%;
+    height: auto;
+    max-height: 400px;
     object-fit: contain;
+    border-radius: 6px;
+    background: #000;
 }
-.slider-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-.slider-buttons button {
-    background: rgba(0,0,0,0.5);
-    border: none;
-    color: white;
-    font-size: 1.5em;
-    padding: 5px 10px;
-    cursor: pointer;
-}
+
 .languages {
     display: flex;
     justify-content: space-between;
@@ -145,16 +116,10 @@ footer a {
 
     <div class="section">
         <h2>Screenshots</h2>
-        <div class="slider">
-            <div class="slides" id="slides">
-                <div class="slide"><img src="screenshot1.png" alt="Screenshot 1"></div>
-                <div class="slide"><img src="screenshot2.png" alt="Screenshot 2"></div>
-                <div class="slide"><img src="screenshot3.png" alt="Screenshot 3"></div>
-            </div>
-            <div class="slider-buttons">
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
-            </div>
+        <div class="screenshot-grid">
+            <img src="screenshot1.png" alt="Screenshot 1">
+            <img src="screenshot2.png" alt="Screenshot 2">
+            <img src="screenshot3.png" alt="Screenshot 3">
         </div>
     </div>
 
@@ -198,29 +163,6 @@ footer a {
     &copy; 2025 Loanit. All rights reserved.
     <a href="privacy-policy.html">Privacy Policy</a>
 </footer>
-
-<script>
-const slides = document.getElementById('slides');
-const totalSlides = slides.children.length;
-let index = 0;
-
-function updateSlide() {
-    slides.style.transform = `translateX(-${index * 100}%)`;
-}
-
-document.getElementById('next').addEventListener('click', () => {
-    index = (index + 1) % totalSlides;
-    updateSlide();
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-    index = (index - 1 + totalSlides) % totalSlides;
-    updateSlide();
-});
-
-// Инициализация
-updateSlide();
-</script>
 
 </body>
 </html>
